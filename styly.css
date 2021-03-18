@@ -1,11 +1,70 @@
 body {
-  background: linear-gradient(#615dad, #ffc8da);
+  background-image: linear-gradient(#615dad, #ffc8da);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   margin: 0;
+  position: relative;
+  margin-bottom: 0;
+}
+
+div {
+  position: relative;
+  top: 100px;
+  height: 1000px;
 }
 
 h1 {
   font-family: 'Lobster';
   color: white;
+  font-size: 40px;
+}
+
+header {
+  width: 400px;
+  height: 243.75px;
+}
+
+img {
+  width: 400px;
+  border-radius: 5px 5px 0 0;
+  margin: 0;
+}
+
+.popis section {
+  width: 400px;
+  margin: 0;
+}
+
+section {
+  background-color: #283e50;
+  color: white;
+  text-align: center;
+  width: 380px;
+  height: 260px;
+  font-family: sans-serif;
+  padding: 10px 10px 10px 10px;
+}
+ul,
+.tlacitka {
+  padding: 0;
+  width: 400px;
+  height: 76px;
+}
+
+.tlacitka a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+
+.pravidla {
+  background-color: #1fcca4;
+  display: block;
+}
+
+.zacit {
+  background-color: #0197f6;
+  display: block;
 }
