@@ -1,5 +1,8 @@
-div {
-  background-image: linear-gradient(#615dad, #ffc8da);
+body {
+  background: linear-gradient(#615dad, #ffc8da);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
 }
 
 h1 {
