@@ -8,9 +8,11 @@ body {
 }
 
 div {
-  position: relative;
+  position: absolute;
   top: 100px;
   width: 400px;
+  left: 50%;
+  margin: 0 0 0 -200px;
 }
 
 h1 {
@@ -29,6 +31,7 @@ img {
   width: 400px;
   border-radius: 5px 5px 0 0;
   margin: 0;
+  display: block;
 }
 
 p {
