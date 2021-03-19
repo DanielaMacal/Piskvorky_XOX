@@ -1,26 +1,28 @@
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
-  background-size: auto;
   position: relative;
+  height: 1000px;
+  color: white;
+  font-family: sans-serif;
   margin: 0;
 }
 
 div {
   position: relative;
   top: 100px;
-  height: 1000px;
-  margin-bottom: 0;
+  width: 400px;
 }
 
 h1 {
   font-family: 'Lobster';
   color: white;
-  font-size: 40px;
-}
-
-header {
+  font-size: 50px;
+  background-color: #283e50;
   width: 400px;
-  height: 243.75px;
+  padding: 30px 0;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
 }
 
 img {
@@ -29,45 +31,48 @@ img {
   margin: 0;
 }
 
-.popis section,
 p {
-  width: 400px;
-  margin: 0;
-  padding: 0;
-}
-
-section {
+  width: 380px;
   background-color: #283e50;
   color: white;
+  padding: 0 10px 30px 10px;
+  margin: 0;
   text-align: center;
-  width: 380px;
-  height: 260px;
-  font-family: sans-serif;
-  padding: 10px 10px 10px 10px;
+  line-height: 25px;
 }
+
 ul,
 .tlacitka {
   padding: 0;
   width: 400px;
   height: 76px;
   margin: 0;
+  text-align: center;
 }
 
 .tlacitka a {
   display: inline-block;
   text-decoration: none;
   color: white;
-  padding: 10px;
+  padding: 20px;
   margin: 0;
 }
 
 .pravidla {
   background-color: #1fcca4;
   display: block;
-  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+.pravidla:hover {
+  background-color: #1cbb96;
 }
 
 .zacit {
   background-color: #0197f6;
   display: block;
+}
+
+.zacit:hover {
+  background-color: #0090e9;
 }
