@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["wBRzNad"]); }
+
+__d("CometVideoHomeRootBEOneAhead",["JSResourceForInteraction"],(function(a,b,c,d,e,f){"use strict";b("JSResourceForInteraction")("CometVideoHomeRoot.react").__setRef("CometVideoHomeRootBEOneAhead");a=null;e.exports=a}),null);

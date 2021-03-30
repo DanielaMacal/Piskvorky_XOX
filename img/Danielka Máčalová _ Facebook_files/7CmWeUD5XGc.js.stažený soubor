@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["AsFH24P"]); }
+
+__d("GroupsCometTabRootBEOneAhead",["JSResourceForInteraction"],(function(a,b,c,d,e,f){"use strict";b("JSResourceForInteraction")("GroupsCometTabRoot.react").__setRef("GroupsCometTabRootBEOneAhead");a=null;e.exports=a}),null);

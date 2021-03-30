@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["VWUa5\/5"]); }
+
+__d("GroupsCometCrossGroupFeedRootBEOneAhead",["JSResourceForInteraction"],(function(a,b,c,d,e,f){"use strict";b("JSResourceForInteraction")("GroupsCometCrossGroupFeedRoot.react").__setRef("GroupsCometCrossGroupFeedRootBEOneAhead");a=null;e.exports=a}),null);

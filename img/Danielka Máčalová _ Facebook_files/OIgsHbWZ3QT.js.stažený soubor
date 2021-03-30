@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["+8QN65T"]); }
+
+__d("CometMarketplaceRootBEOneAhead",["JSResourceForInteraction"],(function(a,b,c,d,e,f){"use strict";b("JSResourceForInteraction")("CometMarketplaceRoot.react").__setRef("CometMarketplaceRootBEOneAhead");a=null;e.exports=a}),null);
