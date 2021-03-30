@@ -32,6 +32,17 @@ h1 {
   font-weight: 500;
 }
 
+ol {
+  text-align: center;
+  margin: 10px;
+}
+
+li {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+}
+
 img {
   width: 100%;
   border-radius: 5px 5px 0 0;
@@ -50,7 +61,8 @@ p {
   flex-direction: column;
 }
 
-.pravidla {
+.pravidla,
+.uvodni {
   background-color: #1fcca4;
   border-bottom: 1px solid black;
   padding: 10px;
