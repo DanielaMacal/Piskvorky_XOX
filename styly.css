@@ -121,6 +121,7 @@ div.pravidla6 {
 figure {
   display: flex;
   flex-wrap: wrap;
+  margin: 1rem;
 }
 
 @media (min-width: 1000px) {
@@ -134,4 +135,5 @@ figure {
   div.pravidla5,
   div.pravidla6 {
   flex-basis: 50%;
+
 }
