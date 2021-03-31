@@ -101,7 +101,7 @@ p {
 
 figcaption {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
   font-style: italic;
   font-weight: 50;
@@ -113,11 +113,12 @@ div.pravidla3,
 div.pravidla4,
 div.pravidla5,
 div.pravidla6 {
-  display: block;
   width: 100%;
+  display: block;
+  padding: 1rem;
 }
 
-div.obrPrav {
+figure {
   display: flex;
   flex-wrap: wrap;
 }
@@ -132,6 +133,5 @@ div.obrPrav {
   div.pravidla4,
   div.pravidla5,
   div.pravidla6 {
-    width: 50%;
-  }
+  flex-basis: 50%;
 }
