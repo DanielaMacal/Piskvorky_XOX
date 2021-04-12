@@ -124,7 +124,7 @@ figure {
   margin: 1rem;
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   main {
     width: 800px;
   }
@@ -135,5 +135,4 @@ figure {
   div.pravidla5,
   div.pravidla6 {
   flex-basis: 50%;
-}
-
+} */
