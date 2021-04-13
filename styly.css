@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  min-height: 100%;
 }
 *,
 ::after,
@@ -18,7 +19,7 @@ body {
   background-repeat: no-repeat;
 }
 
-main {
+.uvodPravidla {
   background-color: #283e50;
   width: 400px;
   display: flex;
@@ -27,6 +28,79 @@ main {
   margin: 100px auto;
   border-radius: 5px 5px 0 0;
 }
+
+.kartaHra {
+  max-width: 80vmin;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 60px;
+  
+}
+
+.playBtn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: black solid 1px;
+  background-color: hsla(292, 32%, 86%, 0.541);
+}
+
+.btn {
+  padding: 0;
+  margin: 0;
+  width: calc(100% / 10);
+  height: 8vmin;
+  background-color: transparent;
+  border: black solid 1px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: hsla(315, 70%, 91%, 0.685);
+}
+
+.kontejner {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  
+}
+.hraje {
+  font-size: 19px;
+  padding: 0;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+img.home,
+img.restart {
+  width: 40px;
+  border-radius: 5px
+}
+
+img.home {
+  background-color:  #1fcca4;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+img.restart {
+  background-color: #0197f6;
+  padding: 10px;
+}
+
+.home:hover,
+.home:focus {
+  background-color: #1cbb96;
+}
+
+.restart:hover,
+.restart:focus {
+  background-color: #0090e9;
+}
+
 
 h1 {
   font-family: 'Lobster';
@@ -44,7 +118,7 @@ li {
   width: 100%;
 }
 
-img {
+img.uvodniObr {
   width: 100%;
   margin: 0;
 }
@@ -76,7 +150,9 @@ p {
 }
 
 .pravidla:hover,
-.uvodni:hover {
+.uvodni:hover,
+.pravidla:focus,
+.uvodni:focus {
   background-color: #1cbb96;
 }
 
@@ -89,7 +165,8 @@ p {
   padding: 1rem;
 }
 
-.zacit:hover {
+.zacit:hover,
+.zacit:focus {
   background-color: #0090e9;
 }
 
@@ -122,10 +199,11 @@ figure {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem;
+  justify-content: space evenly;
 }
 
-/* @media (min-width: 1000px) {
-  main {
+@media (min-width: 1000px) {
+  main.uvodPravidla {
     width: 800px;
   }
   div.pravidla1,
@@ -135,4 +213,4 @@ figure {
   div.pravidla5,
   div.pravidla6 {
   flex-basis: 50%;
-} */
+}
