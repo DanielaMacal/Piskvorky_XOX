@@ -29,6 +29,8 @@ body {
   border-radius: 5px 5px 0 0;
 }
 
+/*-----------------------Hra----------------------*/
+
 .kartaHra {
   max-width: 80vmin;
   display: flex;
@@ -101,7 +103,7 @@ img.restart {
   background-color: #0090e9;
 }
 
-
+/*-----------------------Pravidla-----------------------*/
 h1 {
   font-family: 'Lobster';
   font-size: 50px;
@@ -117,6 +119,38 @@ li {
   text-align: left;
   width: 100%;
 }
+img {
+  width: 100%;
+  margin: 0;
+}
+
+
+figcaption {
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-style: italic;
+  font-weight: 50;
+}
+
+div.pravidla1,
+div.pravidla2,
+div.pravidla3,
+div.pravidla4,
+div.pravidla5,
+div.pravidla6 {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+}
+
+figure {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+/*-----------------------Úvod----------------------*/
 
 img.uvodniObr {
   width: 100%;
@@ -176,31 +210,7 @@ p {
   filter: invert(100%);
 }
 
-figcaption {
-  width: 100%;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  font-style: italic;
-  font-weight: 50;
-}
-
-div.pravidla1,
-div.pravidla2,
-div.pravidla3,
-div.pravidla4,
-div.pravidla5,
-div.pravidla6 {
-  width: 100%;
-  display: block;
-  padding: 1rem;
-}
-
-figure {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1rem;
-  justify-content: space evenly;
-}
+/*------------------Responzivní design-------------------*/
 
 @media (min-width: 1000px) {
   main.uvodPravidla {
