@@ -103,20 +103,31 @@ img.restart {
   background-color: #0090e9;
 }
 
-.playBtn__btn--circle {
-  background-image: url('img/circle.svg');
+.playBtn__btn--circle,
+.playBtn__btn--cross {
   background-size: 65%;
   background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
+  animation-name: gradual-growth;
+  animation-duration: 0.15s;
+}
+
+.playBtn__btn--circle {
+  background-image: url('img/circle.svg');
 }
 
 .playBtn__btn--cross {
   background-image: url('img/cross.svg');
-  background-size: 65%;
-  background-position: center;
-  background-repeat: no-repeat;
-  pointer-events: none;
+}
+
+@keyframes gradual-growth {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 65%;
+  }
 }
 
 
