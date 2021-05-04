@@ -7,12 +7,94 @@ document.querySelectorAll('.playBtn__btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     if (naTahu === 'circle') {
       btn.classList.add('playBtn__btn--circle');
-      hrajeHrac.src = 'img/circle.svg';
+      hrajeHrac.src = 'img/cross.svg';
       naTahu = 'cross';
     } else {
       btn.classList.add('playBtn__btn--cross');
-      hrajeHrac.src = 'img/cross.svg';
+      hrajeHrac.src = 'img/circle.svg';
       naTahu = 'circle';
     }
   });
 });
+
+const getSymbol = (field) => {
+  // Název třídy přizpůsob tvému kódu.
+  if (field.classList.contains('playBtn__btn--cross')) {
+    return 'circle';
+  } else if (field.classList.contains('playBtn__btn--circle')) {
+    return 'cross';
+  }
+};
+
+console.log(getSymbol());
+
+// const boardSize = 10; // 10x10
+// const fields = document.querySelectorAll('.playBtn__btn'); // Selektor pozměň tak, aby odpovídal tvému kódu.
+
+// const getField = (row, column) => fields[row * boardSize + column];
+
+// const getPosition = (playBtn) => {
+//   let fieldIndex = 0;
+//   while (fieldIndex < fields.length && playBtn !== fields[fieldIndex]) {
+//     fieldIndex++;
+//   }
+
+//   return {
+//     row: Math.floor(fieldIndex / boardSize),
+//     column: fieldIndex % boardSize,
+//   };
+// };
+
+// const symbolsToWin = 5;
+// const isWinningMove = (playBtn) => {
+//   const origin = getPosition(playBtn);
+//   const symbol = getSymbol(playBtn);
+
+//   let i;
+
+//   let inRow = 1; // Jednička pro právě vybrané políčko
+//   // Koukni doleva
+//   i = origin.column;
+//   while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
+//     inRow++;
+//     i--;
+//   }
+
+//   // Koukni doprava
+//   i = origin.column;
+//   while (
+//     i < boardSize - 1 &&
+//     symbol === getSymbol(getField(origin.row, i + 1))
+//   ) {
+//     inRow++;
+//     i++;
+//   }
+
+//   if (inRow >= symbolsToWin) {
+//     return true;
+//   }
+
+//   let inColumn = 1;
+//   // Koukni nahoru
+//   i = origin.row;
+//   while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
+//     inColumn++;
+//     i--;
+//   }
+
+//   // Koukni dolu
+//   i = origin.row;
+//   while (
+//     i < boardSize - 1 &&
+//     symbol === getSymbol(getField(i + 1, origin.column))
+//   ) {
+//     inColumn++;
+//     i++;
+//   }
+
+//   if (inColumn >= symbolsToWin) {
+//     return true;
+//   }
+
+//   return false;
+// };

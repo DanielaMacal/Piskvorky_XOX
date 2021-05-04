@@ -38,7 +38,6 @@ body {
   flex-direction: column;
   margin: auto;
   margin-bottom: 60px;
-  
 }
 
 .playBtn {
@@ -67,7 +66,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
-  
 }
 .hraje {
   font-size: 20px;
@@ -79,11 +77,11 @@ body {
 img.home,
 img.restart {
   width: 40px;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 img.home {
-  background-color:  #1fcca4;
+  background-color: #1fcca4;
   padding: 10px;
   margin-right: 5px;
 }
@@ -130,7 +128,6 @@ img.restart {
   }
 }
 
-
 /*-----------------------Pravidla-----------------------*/
 h1 {
   font-family: 'Lobster';
@@ -151,7 +148,6 @@ img {
   width: 100%;
   margin: 0;
 }
-
 
 figcaption {
   width: 100%;
@@ -251,6 +247,6 @@ p {
   div.pravidla4,
   div.pravidla5,
   div.pravidla6 {
-  flex-basis: 50%;
+    flex-basis: 50%;
+  }
 }
-.
