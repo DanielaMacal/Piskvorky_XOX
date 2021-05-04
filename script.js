@@ -60,6 +60,7 @@ const isWinningMove = (field) => {
   const symbol = getSymbol(field);
 
   let i;
+  let y;
 
   let inRow = 1; // Jednička pro právě vybrané políčko
   // Koukni doleva
@@ -102,6 +103,66 @@ const isWinningMove = (field) => {
   }
 
   if (inColumn >= symbolsToWin) {
+    return true;
+  }
+
+  let inDigiDown = 1; // Jednička pro právě vybrané políčko
+  // Koukni zekšá nahoru doleva
+  i = origin.column;
+  y = origin.row;
+  while (i > 0 && y > 0 && symbol === getSymbol(getField(y - 1, i - 1))) {
+    inDigiDown++;
+
+    i--;
+    y--;
+  }
+
+  // Koukni zekšá dolů doprava
+  i = origin.column;
+  y = origin.row;
+  while (
+    i < boardSize - 1 &&
+    y < boardSize - 1 &&
+    symbol === getSymbol(getField(y + 1, i + 1))
+  ) {
+    inDigiDown++;
+    i++;
+    y++;
+  }
+
+  if (inDigiDown >= symbolsToWin) {
+    return true;
+  }
+
+  let inDigiUp = 1; // Jednička pro právě vybrané políčko
+  // Koukni zekšá dolů doleva
+  i = origin.column;
+  y = origin.row;
+  while (
+    i > 0 &&
+    y < boardSize - 1 &&
+    symbol === getSymbol(getField(y + 1, i - 1))
+  ) {
+    inDigiUp++;
+
+    i--;
+    y++;
+  }
+
+  // Koukni zekšá nahoru doprava
+  i = origin.column;
+  y = origin.row;
+  while (
+    i < boardSize - 1 &&
+    y < 0 &&
+    symbol === getSymbol(getField(y + 1, i - 1))
+  ) {
+    inDigiUp++;
+    i++;
+    y--;
+  }
+
+  if (inDigiUp >= symbolsToWin) {
     return true;
   }
 
