@@ -14,6 +14,17 @@ document.querySelectorAll('.playBtn__btn').forEach((btn) => {
       hrajeHrac.src = 'img/circle.svg';
       naTahu = 'circle';
     }
+    if (isWinningMove(btn)) {
+      setTimeout(() => {
+        if (naTahu === 'cross') {
+          confirm('Kolečko vyhrává! Spustit novou hru?');
+          location.reload();
+        } else {
+          confirm('Křížek vyhrává! Spustit novou hru?');
+          location.reload();
+        }
+      });
+    }
   });
 });
 
@@ -26,75 +37,73 @@ const getSymbol = (field) => {
   }
 };
 
-console.log(getSymbol());
+const boardSize = 10; // 10x10
+const fields = document.querySelectorAll('.playBtn__btn'); // Selektor pozměň tak, aby odpovídal tvému kódu.
 
-// const boardSize = 10; // 10x10
-// const fields = document.querySelectorAll('.playBtn__btn'); // Selektor pozměň tak, aby odpovídal tvému kódu.
+const getField = (row, column) => fields[row * boardSize + column];
 
-// const getField = (row, column) => fields[row * boardSize + column];
+const getPosition = (field) => {
+  let fieldIndex = 0;
+  while (fieldIndex < fields.length && field !== fields[fieldIndex]) {
+    fieldIndex++;
+  }
 
-// const getPosition = (playBtn) => {
-//   let fieldIndex = 0;
-//   while (fieldIndex < fields.length && playBtn !== fields[fieldIndex]) {
-//     fieldIndex++;
-//   }
+  return {
+    row: Math.floor(fieldIndex / boardSize),
+    column: fieldIndex % boardSize,
+  };
+};
 
-//   return {
-//     row: Math.floor(fieldIndex / boardSize),
-//     column: fieldIndex % boardSize,
-//   };
-// };
+const symbolsToWin = 5;
+const isWinningMove = (field) => {
+  const origin = getPosition(field);
+  const symbol = getSymbol(field);
 
-// const symbolsToWin = 5;
-// const isWinningMove = (playBtn) => {
-//   const origin = getPosition(playBtn);
-//   const symbol = getSymbol(playBtn);
+  let i;
 
-//   let i;
+  let inRow = 1; // Jednička pro právě vybrané políčko
+  // Koukni doleva
+  i = origin.column;
+  while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
+    inRow++;
+    i--;
+  }
 
-//   let inRow = 1; // Jednička pro právě vybrané políčko
-//   // Koukni doleva
-//   i = origin.column;
-//   while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
-//     inRow++;
-//     i--;
-//   }
+  // Koukni doprava
+  i = origin.column;
+  while (
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(origin.row, i + 1))
+  ) {
+    inRow++;
+    i++;
+  }
 
-//   // Koukni doprava
-//   i = origin.column;
-//   while (
-//     i < boardSize - 1 &&
-//     symbol === getSymbol(getField(origin.row, i + 1))
-//   ) {
-//     inRow++;
-//     i++;
-//   }
+  if (inRow >= symbolsToWin) {
+    return true;
+  }
 
-//   if (inRow >= symbolsToWin) {
-//     return true;
-//   }
+  let inColumn = 1;
+  // Koukni nahoru
+  i = origin.row;
+  while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
+    inColumn++;
+    i--;
+  }
 
-//   let inColumn = 1;
-//   // Koukni nahoru
-//   i = origin.row;
-//   while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
-//     inColumn++;
-//     i--;
-//   }
+  // Koukni dolu
+  i = origin.row;
+  while (
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(i + 1, origin.column))
+  ) {
+    inColumn++;
+    i++;
+  }
 
-//   // Koukni dolu
-//   i = origin.row;
-//   while (
-//     i < boardSize - 1 &&
-//     symbol === getSymbol(getField(i + 1, origin.column))
-//   ) {
-//     inColumn++;
-//     i++;
-//   }
+  if (inColumn >= symbolsToWin) {
+    return true;
+  }
 
-//   if (inColumn >= symbolsToWin) {
-//     return true;
-//   }
-
-//   return false;
-// };
+  return false;
+};
