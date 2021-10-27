@@ -17,9 +17,11 @@ document.querySelectorAll('.playBtn__btn').forEach((btn) => {
     if (isWinningMove(btn)) {
       setTimeout(() => {
         if (naTahu === 'cross') {
+          btn.classList.add('playBtn__btn--circle');
           confirm('Kolečko vyhrává! Spustit novou hru?');
           location.reload();
         } else {
+          btn.classList.add('playBtn__btn--cross');
           confirm('Křížek vyhrává! Spustit novou hru?');
           location.reload();
         }
